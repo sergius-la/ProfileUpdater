@@ -25,32 +25,16 @@ public class ProfilePage extends BasePageClass {
 	private By lastEditedDateText = By.xpath("//h3[@class='ng-scope ng-binding']");
 
 	public void clickOnEditButton() {
-		driver.findElement(editButton).click();
+		super.clickOn(editButton);
 	}
 	
 	public void clickOnDoneButton() {
-		driver.findElement(doneButton).click();
-	}
-
-	private List<WebElement> getListSkills() {
-		List<WebElement> elements = driver.findElements(skillInputFileds);
-		//		for (WebElement element : elements) {
-		//			System.out.println(element.getAttribute("value"));
-		//		}
-		return elements;
-	}
-
-	private List<WebElement> getListYearsExp() {
-		List<WebElement> elements = driver.findElements(yearsExpInputFileds);
-		//		for (WebElement element : elements) {
-		//			System.out.println(element.getAttribute("value"));
-		//		}
-		return elements;
+		super.clickOn(doneButton);
 	}
 
 	
 	public boolean changeSkill(String oldSkill, String newSkill) {
-		List<WebElement> elementsSkills = getListSkills();
+		List<WebElement> elementsSkills = super.getListOfWebElements(skillInputFileds);
 		boolean result = false; 
 
 		for (WebElement element : elementsSkills) {
@@ -67,8 +51,8 @@ public class ProfilePage extends BasePageClass {
 
 
 	public boolean changeYearExpSkill(String skill, String newYearsExp) {
-		List<WebElement> elementsSkills = getListSkills();
-		List<WebElement> elementsYearsExp = getListYearsExp();
+		List<WebElement> elementsSkills = super.getListOfWebElements(skillInputFileds);
+		List<WebElement> elementsYearsExp = super.getListOfWebElements(yearsExpInputFileds);
 		boolean result = false;
 		
 		for (int i = 0; i < elementsSkills.size(); i++) {

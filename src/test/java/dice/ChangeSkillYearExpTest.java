@@ -11,14 +11,13 @@ public class ChangeSkillYearExpTest extends BaseScenario {
 	@Test
 	public static void changeSkillYearExp() throws InterruptedException {
 		
-		
-		homepage.navigateTo(baseURL);
+		homepage.navigateToHomepage();
 		homepage.logIn(email, password);
 		profilePage.clickOnEditButton();
 		profilePage.changeYearExpSkill("Cucumber", "5");
 		profilePage.clickOnDoneButton();
 		profilePage.scrollPageUP();
-		homepage.singOut();
+		homepage.logOut();
 		driver.close();
 	}
 	

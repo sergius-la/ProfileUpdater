@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="26513" started-at="2018-08-20T05:39:00Z" finished-at="2018-08-20T05:39:27Z">
+  <suite name="Default suite" duration-ms="22365" started-at="2018-08-20T08:09:48Z" finished-at="2018-08-20T08:10:10Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="26513" started-at="2018-08-20T05:39:00Z" finished-at="2018-08-20T05:39:27Z">
+    <test name="Default test" duration-ms="22365" started-at="2018-08-20T08:09:48Z" finished-at="2018-08-20T08:10:10Z">
       <class name="dice.ChangeSkillYearExpTest">
-        <test-method status="PASS" signature="changeSkillYearExp()[pri:0, instance:dice.ChangeSkillYearExpTest@1b11171f]" name="changeSkillYearExp" duration-ms="26483" started-at="2018-08-19T22:39:00Z" finished-at="2018-08-19T22:39:27Z">
+        <test-method status="PASS" signature="changeSkillYearExp()[pri:0, instance:dice.ChangeSkillYearExpTest@1b11171f]" name="changeSkillYearExp" duration-ms="22326" started-at="2018-08-20T01:09:48Z" finished-at="2018-08-20T01:10:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changeSkillYearExp -->
       </class> <!-- dice.ChangeSkillYearExpTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
