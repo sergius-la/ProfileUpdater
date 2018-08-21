@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="dice.ChangeSkillYearExpTest">
+      <class name="testing.TestScenario">
         <methods>
-          <include name="changeSkillYearExp"/>
+          <include name="testing" invocation-numbers="0"/>
+          <include name="endOfTest"/>
         </methods>
-      </class> <!-- dice.ChangeSkillYearExpTest -->
+      </class> <!-- testing.TestScenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,16 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22365" started-at="2018-08-20T08:09:48Z" finished-at="2018-08-20T08:10:10Z">
+  <suite name="Default suite" duration-ms="12316" started-at="2018-08-21T03:40:29Z" finished-at="2018-08-21T03:40:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22365" started-at="2018-08-20T08:09:48Z" finished-at="2018-08-20T08:10:10Z">
-      <class name="dice.ChangeSkillYearExpTest">
-        <test-method status="PASS" signature="changeSkillYearExp()[pri:0, instance:dice.ChangeSkillYearExpTest@1b11171f]" name="changeSkillYearExp" duration-ms="22326" started-at="2018-08-20T01:09:48Z" finished-at="2018-08-20T01:10:10Z">
+    <test name="Default test" duration-ms="12316" started-at="2018-08-21T03:40:29Z" finished-at="2018-08-21T03:40:41Z">
+      <class name="testing.TestScenario">
+        <test-method status="PASS" signature="testing(java.lang.String, java.lang.String)[pri:0, instance:testing.TestScenario@53aac487]" name="testing" duration-ms="12263" started-at="2018-08-20T20:40:29Z" data-provider="Dice Credentials" finished-at="2018-08-20T20:40:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sergius.la@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SuN-Qmw-S7k-Ybs]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- changeSkillYearExp -->
-      </class> <!-- dice.ChangeSkillYearExpTest -->
+        </test-method> <!-- testing -->
+        <test-method status="PASS" signature="endOfTest()[pri:0, instance:testing.TestScenario@53aac487]" name="endOfTest" is-config="true" duration-ms="0" started-at="2018-08-20T20:40:41Z" finished-at="2018-08-20T20:40:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endOfTest -->
+      </class> <!-- testing.TestScenario -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

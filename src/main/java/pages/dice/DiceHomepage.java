@@ -12,6 +12,7 @@ public class DiceHomepage extends BasePageClass {
 	private By loginRegisterButton = By.xpath("//a[@id='Login_1']");
 	private By loginButton = By.xpath("//button[@id='LoginBtn_1']");
 	private By singOutButton = By.xpath("//button[@data-automation-id='logout-button']");
+
 	
 	//Main Menu: Input Fields
 	private By loginEmailInput = By.xpath("//input[@id='Email_1']");
@@ -26,7 +27,7 @@ public class DiceHomepage extends BasePageClass {
 	}
 	
 	public void navigateToHomepage() {
-		super.navigateToHomepage(diceUrl);
+		super.navigateTo(diceUrl);
 	}
 	
 	//TODO; Add Wait Until Expected Conditions

@@ -23,6 +23,9 @@ public class ProfilePage extends BasePageClass {
 
 	//Text
 	private By lastEditedDateText = By.xpath("//h3[@class='ng-scope ng-binding']");
+	
+	//Link
+	private By openingsNationwide = By.xpath("//a[text() = 'openings nationwide']");
 
 	public void clickOnEditButton() {
 		super.clickOn(editButton);
@@ -30,6 +33,10 @@ public class ProfilePage extends BasePageClass {
 	
 	public void clickOnDoneButton() {
 		super.clickOn(doneButton);
+	}
+	
+	public void clickOnOpeningsNationwide() {
+		super.clickOn(openingsNationwide);
 	}
 
 	

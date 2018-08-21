@@ -5,10 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+
+
 
 public class BasePageClass {
 
@@ -16,22 +20,44 @@ public class BasePageClass {
 	protected WebDriverWait wait;
 	protected Actions actions;
 	protected JavascriptExecutor js;
+	protected ArrayList<String> tabs;
 
 	public BasePageClass(WebDriver driver) {
 		this.driver = driver;
 		wait = new WebDriverWait(driver, 45);
 		actions = new Actions(driver);
 		js = (JavascriptExecutor) driver;
+		tabs = new ArrayList<String>();
+	}
+	
+	//Navigation
+	public void openLinkNewTab(By by) {
+		driver.findElement(by).sendKeys(Keys.COMMAND, "t", Keys.RETURN);
 	}
 
-	public void scrollPageUP() {
-		js.executeScript("window.scrollBy(0,-1000)");
-	}
-
-	public void navigateToHomepage(String link) {
+	public void navigateTo(String link) {
 		driver.get(link);
 	}
 
+	public void switchToNewTab() {
+		tabs = new ArrayList<String> (driver.getWindowHandles());
+	    driver.switchTo().window(tabs.get(1));
+	}
+	
+	public void closeNewTab() {
+	    driver.close();
+	    driver.switchTo().window(tabs.get(0)); 
+	}
+	
+	public void scrollPageUP() {
+		js.executeScript("window.scrollBy(0,-1000)");
+	}
+	
+	public void scrollPageDown() {
+		js.executeScript("window.scrollBy(0,1000)");
+	}
+	
+	//Actions
 	public void clickOn(By by) {
 		driver.findElement(by).click();
 	}
@@ -47,5 +73,10 @@ public class BasePageClass {
 		//		}
 		return elements;
 	}
-
+	
+	//Text
+	public String getTextFrom(By by) {
+		return driver.findElement(by).getText();
+	}
+	
 }

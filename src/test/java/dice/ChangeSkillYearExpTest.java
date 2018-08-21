@@ -4,15 +4,16 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 
 import base.BaseScenario;
+import utility.DataClass;
 
 public class ChangeSkillYearExpTest extends BaseScenario {
 	
 	
-	@Test
-	public static void changeSkillYearExp() throws InterruptedException {
+	@Test(dataProvider = "Dice Credentials", dataProviderClass = DataClass.class)
+	public static void changeSkillYearExp(String email, String pass) throws InterruptedException {
 		
 		homepage.navigateToHomepage();
-		homepage.logIn(email, password);
+		homepage.logIn(email, pass);
 		profilePage.clickOnEditButton();
 		profilePage.changeYearExpSkill("Cucumber", "5");
 		profilePage.clickOnDoneButton();
