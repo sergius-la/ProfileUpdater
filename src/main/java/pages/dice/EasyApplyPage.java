@@ -16,7 +16,6 @@ public class EasyApplyPage extends BasePageClass {
 	private By resumeSelectOption = By.xpath("//ul[@id='resume-select-options']");
 	
 	
-	
 	//Action
 	public void resumeSelect() {
 		actions.click(driver.findElement(resumeSelectDropDown));
@@ -24,6 +23,7 @@ public class EasyApplyPage extends BasePageClass {
 		actions.click(driver.findElement(resumeSelectOption));
 		actions.perform();
 	}
+	
 	
 	
 }

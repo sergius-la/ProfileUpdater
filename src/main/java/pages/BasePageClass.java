@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.Actions;
 
@@ -67,6 +68,7 @@ public class BasePageClass {
 	}
 
 	public List<WebElement> getListOfWebElements(By by) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
 		List<WebElement> elements = driver.findElements(by);
 		//		for (WebElement element : elements) {
 		//			System.out.println(element.getAttribute("value"));
