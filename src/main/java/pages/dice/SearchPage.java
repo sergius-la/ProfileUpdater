@@ -21,5 +21,5 @@ public class SearchPage extends BasePageClass {
 		return super.getListOfWebElements(easyApplyLinks);
 	}
 	
-	//TODO: Logic on Opening a new page and removing it from a list
+	//TODO: Logic on Opening a new page and removing it from a list 
 }

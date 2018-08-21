@@ -30,5 +30,7 @@ public class TestScenario extends BaseScenario {
 //		homepage.navigateTo(link);
 //		jobDescriptionPage.clickOnApplyButton();
 		
+//		driver.close();
+//		driver.quit();
 	}
 }
