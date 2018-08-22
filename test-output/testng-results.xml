@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30184" started-at="2018-08-21T22:03:05Z" finished-at="2018-08-21T22:03:35Z">
+  <suite name="Default suite" duration-ms="13622" started-at="2018-08-22T08:26:08Z" finished-at="2018-08-22T08:26:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30184" started-at="2018-08-21T22:03:05Z" finished-at="2018-08-21T22:03:35Z">
+    <test name="Default test" duration-ms="13622" started-at="2018-08-22T08:26:08Z" finished-at="2018-08-22T08:26:22Z">
       <class name="testing.TestScenario">
-        <test-method status="FAIL" signature="testing(java.lang.String, java.lang.String)[pri:0, instance:testing.TestScenario@7db12bb6]" name="testing" duration-ms="30113" started-at="2018-08-21T15:03:05Z" data-provider="Dice Credentials" finished-at="2018-08-21T15:03:35Z">
+        <test-method status="FAIL" signature="testing(java.lang.String, java.lang.String)[pri:0, instance:testing.TestScenario@272113c4]" name="testing" duration-ms="13580" started-at="2018-08-22T01:26:08Z" data-provider="Dice Credentials" finished-at="2018-08-22T01:26:22Z">
           <params>
             <param index="0">
               <value>
@@ -20,13 +20,15 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.ClassCastException">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[java.util.LinkedHashSet cannot be cast to java.util.ArrayList]]>
+              <![CDATA[Index: 0, Size: 0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: java.util.LinkedHashSet cannot be cast to java.util.ArrayList
-	at testing.TestScenario.testing(TestScenario.java:51)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at testing.TestScenario.testing(TestScenario.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,11 +56,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testing -->
-        <test-method status="PASS" signature="endOfTest()[pri:0, instance:testing.TestScenario@7db12bb6]" name="endOfTest" is-config="true" duration-ms="2" started-at="2018-08-21T15:03:35Z" finished-at="2018-08-21T15:03:35Z">
+        <test-method status="PASS" signature="endOfTest()[pri:0, instance:testing.TestScenario@272113c4]" name="endOfTest" is-config="true" duration-ms="1" started-at="2018-08-22T01:26:22Z" finished-at="2018-08-22T01:26:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endOfTest -->

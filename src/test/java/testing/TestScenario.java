@@ -46,11 +46,25 @@ public class TestScenario extends BaseScenario {
 		//TODO: Click on the Apply Button
 		jobDescriptionPage.clickOnApplyButton();
 		
+		jobDescriptionPage.switchToNewTab();
+		
 		
 
-        Set handles = driver.getWindowHandles();
+		easyApplyPage.resumeSelect();
 
-        System.out.println(handles);
+		
+		
+		
+		
+		
+//        easyApplyPage.clearNameInput();
+        
+        
+        
+//        System.out.println(handles);
+        
+        
+        
 
         // Pass a window handle to the other window
 

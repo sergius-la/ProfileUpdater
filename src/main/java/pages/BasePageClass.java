@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.Actions;
@@ -25,10 +26,10 @@ public class BasePageClass {
 
 	public BasePageClass(WebDriver driver) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, 45);
-		actions = new Actions(driver);
-		js = (JavascriptExecutor) driver;
-		tabs = new ArrayList<String>();
+		this.wait = new WebDriverWait(driver, 45);
+		this.actions = new Actions(driver);
+		this.js = (JavascriptExecutor) driver;
+		this.tabs = new ArrayList<String>();
 	}
 	
 	//Navigation
@@ -60,15 +61,21 @@ public class BasePageClass {
 	
 	//Actions
 	public void clickOn(By by) {
+		wait.until(ExpectedConditions.presenceOfElementLocated(by));
 		driver.findElement(by).click();
 	}
 
 	public void sendKeyTo(By by, String text) {
 		driver.findElement(by).sendKeys(text);
 	}
+	
+	public void clear(By by) {
+		wait.until(ExpectedConditions.elementToBeClickable(by));
+		driver.findElement(by).clear();
+	}
 
 	public List<WebElement> getListOfWebElements(By by) {
-		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+//		wait.until(ExpectedConditions.presenceOfElementLocated(by));
 		List<WebElement> elements = driver.findElements(by);
 		//		for (WebElement element : elements) {
 		//			System.out.println(element.getAttribute("value"));

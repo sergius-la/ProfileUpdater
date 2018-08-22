@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 21 15:03:05 PDT 2018</td>
+<td>Started on:</td><td>Wed Aug 22 01:26:08 PDT 2018</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30184 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13622 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,8 +76,10 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testing.TestScenario.testing()'><b>testing</b><br>Test class: testing.TestScenario<br>Parameters: sergius.la@gmail.com, SuN-Qmw-S7k-Ybs</td>
-<td><div><pre>java.lang.ClassCastException: java.util.LinkedHashSet cannot be cast to java.util.ArrayList
-	at testing.TestScenario.testing(TestScenario.java:51)
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at testing.TestScenario.testing(TestScenario.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,9 +105,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1989811701", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1989811701'><pre>java.lang.ClassCastException: java.util.LinkedHashSet cannot be cast to java.util.ArrayList
-	at testing.TestScenario.testing(TestScenario.java:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace757708014", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace757708014'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at testing.TestScenario.testing(TestScenario.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,8 +136,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>30</td>
-<td>testing.TestScenario@7db12bb6</td></tr>
+<td>13</td>
+<td>testing.TestScenario@272113c4</td></tr>
 </table><p>
 </body>
 </html>
