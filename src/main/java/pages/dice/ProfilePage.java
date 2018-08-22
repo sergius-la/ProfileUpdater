@@ -40,7 +40,7 @@ public class ProfilePage extends BasePageClass {
 	}
 
 	
-	public boolean changeSkill(String oldSkill, String newSkill) {
+	public boolean changeSkill(String oldSkill, String newSkill) throws InterruptedException {
 		List<WebElement> elementsSkills = super.getListOfWebElements(skillInputFileds);
 		boolean result = false; 
 
@@ -57,7 +57,7 @@ public class ProfilePage extends BasePageClass {
 	}
 
 
-	public boolean changeYearExpSkill(String skill, String newYearsExp) {
+	public boolean changeYearExpSkill(String skill, String newYearsExp) throws InterruptedException {
 		List<WebElement> elementsSkills = super.getListOfWebElements(skillInputFileds);
 		List<WebElement> elementsYearsExp = super.getListOfWebElements(yearsExpInputFileds);
 		boolean result = false;

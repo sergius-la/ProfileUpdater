@@ -1,5 +1,6 @@
 package pages.dice;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -16,9 +17,21 @@ public class SearchPage extends BasePageClass {
 	
 	//Links
 	private By easyApplyLinks = By.xpath("//a[@class='dice-btn-link  easy-apply']");
+	private By easyApplyAltLinks = By.xpath("a[@class='dice-btn-link job-visited easy-apply']");
 	
-	public List<WebElement> getEasyApplyLinksList() {
-		List<WebElement> links = super.getListOfWebElements(easyApplyLinks);
+	public List<WebElement> getEasyApplyLinksList() throws InterruptedException {
+		Thread.sleep(3000);
+		
+		List<WebElement> links = new ArrayList<>();
+		
+		try {
+			links = super.getListOfWebElements(easyApplyLinks);
+		} catch (Exception e) {
+			System.out.println(e.getStackTrace());
+			
+			links = super.getListOfWebElements(easyApplyAltLinks);
+		}
+		
 //		for (WebElement element : links) {
 //			System.out.println(element.getText());
 //		}

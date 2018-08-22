@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testing.TestScenario">
+      <class name="dice.EasyApplyForNationwidePositionTest">
         <methods>
-          <include name="testing" invocation-numbers="0"/>
+          <include name="startOfTest"/>
           <include name="endOfTest"/>
+          <include name="EasyApplyForNationwidePosition" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testing.TestScenario -->
+      </class> <!-- dice.EasyApplyForNationwidePositionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

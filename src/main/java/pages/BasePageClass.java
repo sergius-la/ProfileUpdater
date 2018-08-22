@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.Actions;
@@ -74,12 +73,13 @@ public class BasePageClass {
 		driver.findElement(by).clear();
 	}
 
-	public List<WebElement> getListOfWebElements(By by) {
+	public List<WebElement> getListOfWebElements(By by) throws InterruptedException {
 //		wait.until(ExpectedConditions.presenceOfElementLocated(by));
+		Thread.sleep(3000);
 		List<WebElement> elements = driver.findElements(by);
-		//		for (WebElement element : elements) {
-		//			System.out.println(element.getAttribute("value"));
-		//		}
+				for (WebElement element : elements) {
+					System.out.println(element.getAttribute("value"));
+				}
 		return elements;
 	}
 	

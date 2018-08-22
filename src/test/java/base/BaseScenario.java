@@ -1,9 +1,12 @@
 package base;
 
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import pages.dice.DiceHomepage;
 import pages.dice.EasyApplyPage;
@@ -23,7 +26,12 @@ public class BaseScenario {
 	
 	@AfterTest
 	public void endOfTest() {
-//		driver.close();
-//		driver.quit(); 
+		driver.close();
+		driver.quit(); 
+	}
+	
+	@BeforeTest
+	public void startOfTest() {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 }
